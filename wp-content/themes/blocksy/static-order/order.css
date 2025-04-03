@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    background-color: rgb(17, 21, 24);
+    padding: 20px;
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-content-maintext{
+    font-size: 17px;
+    font-weight: 600;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 18px;
+}
+.form-item{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.main-modal-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.form-order-btn{
+    margin-top: 20px;
+}
+.order-final-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.result-order-active{
+    font-size: 17px;
+}
+.result-order-not{
+    display: none;
+}
