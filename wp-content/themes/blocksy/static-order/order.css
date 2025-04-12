@@ -74,3 +74,6 @@ body {
 .result-order-not{
     display: none;
 }
+.form-item>input::placeholder{
+    color: white;
+}

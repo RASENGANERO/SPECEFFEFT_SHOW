@@ -34,15 +34,15 @@ do_action('blocksy:content:bottom');
             <span class="modal-content-maintext">Оформление заказа</span>
             <span class="close" id="closeModal">&times;</span>
         </div>
-        <form id="modal-order" action="." method="post">
+        <form id="modal-order" action="." method="post" onsubmit="return false;">
             <div class="form-container">
                 <div class="form-item">
                     <label for="phone">Ваше имя:</label>
-                    <input type="text" id="username" name="username" required pattern="[a-zA-Z\u0400-\u04ff\s]{2,30}" title="Допускаются латинские и русские символы, в количестве от 2">
+                    <input type="text" id="username" name="username" required placeholder="Ваше имя" pattern="[a-zA-Z\u0400-\u04ff\s]{2,30}" title="Допускаются латинские и русские символы, в количестве от 2">
                 </div>
                 <div class="form-item">
                     <label for="phone">Номер телефона:</label>
-                    <input type="text" id="phone" name="phone"  class="phone" required placeholder="+7 (999) 999-99-99">
+                    <input type="text" id="phone" name="phone" class="phone" required placeholder="+7 (999) 999-99-99">
                 </div>
             </div>
             <div class="order-final-form">

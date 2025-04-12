@@ -104,6 +104,7 @@ class Order{
 
         $mail->setFrom('order@speceffektshow.ru', 'speceffektshow.ru');
         $mail->addAddress('sveta_prozhoga@mail.ru');
+        $mail->addAddress('speceffekt@yandex.ru');
         $mail->Subject = 'Новый заказ : '.$orderID;
         
         $mail->msgHTML($body);

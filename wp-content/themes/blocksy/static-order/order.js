@@ -28,7 +28,7 @@ function check_errors() {
 }
 
 function send_order(event){
-
+    document.getElementsByClassName("form-order-btn")[0].setAttribute('style','display:none;');
     event.preventDefault(); // Предотвращаем отправку формы для демонстрации
 
     if (check_errors() != false) {
@@ -73,27 +73,32 @@ document.addEventListener('DOMContentLoaded',()=>{
         let btn = document.getElementById("send-order");
         let span = document.getElementById("closeModal");
 
-        btn.onclick = function() {
-            modal.style.display = "block";
+        if(btn != null) {
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
         }
-        span.onclick = function() {
-            modal.style.display = "none";
+        if(span != null){
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
         }
+       
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
         }
-        document.getElementById("modal-order").addEventListener('submit',send_order);
-
+        if(document.getElementById("modal-order")!=null){
+            document.getElementById("modal-order").addEventListener('submit',send_order);
+        }
+        
 
         let inputUsername = document.getElementById('username');
         let inputPhone = document.getElementById('phone');
         inputUsername.addEventListener('input',clear_input);
         inputPhone.addEventListener('input',clear_input);
 
-        jQuery.mask.definitions['h'] = "[0|1|3|4|5|6|7|9]";
-        jQuery(".phone").mask('+7 (h99) 999-99-99');
         
         inputUsername.addEventListener('click',clear_input);
         inputPhone.addEventListener('click',clear_input);
